@@ -16,15 +16,12 @@ Bearbeiten Sie die folgenden Teilaufgaben.
 a)  Bringen Sie die folgenden Prozessschritte in eine sachlogische
     Reihenfolge.
 
-    - Ziele, Migrationsstrategie
-
-    - Konzeptionierung
-
+    
     - Ist-Analyse
-
-    - Betrieb
-
+    - Konzeptionierung
+    - Ziele, Migrationsstrategie
     - Umsetzung
+    - Betrieb
 
 <!-- -->
 
@@ -32,39 +29,51 @@ b)  Beschreiben Sie die folgenden Aspekte des Projektmanagements in
     eigenen Worten.
 
     - Aufwandsabschätzung
+    Schätzung ber den Aufzubringenden aufwand
 
     - Abnahme
+    Überprüfung des Endresultats 
 
     - Projektstrukturplan
+    Plan über die Projektschichten
 
     - Stakeholder-Analyse
+    Analyser über die Projektteilhabenden
 
 <!-- -->
 
 c)  Geben Sie je zwei Aspekte an, die in einem Lasten- bzw.
     Pflichtenheft enthalten sind.
 
+    Lastenheft:     Was ist das gewunschte ziel
+                    Wieviel Budget ist verfügbar
+
+    Pflichtenheft:  Wie wird das Projekt umgesetzt 
+                    Prozessschritte
+
+
 ## Aufgabe 2
 
 Entscheiden Sie, ob die folgenden Aussagen richtig oder falsch sind.
 
 a)  DevOps steht für Entwicklung und Betrieb eines Unternehmensbereichs.
-
+    Falsch
 <!-- -->
 
 b)  Unter CI versteht man kontinuierliche Identifikation von neuen
     Anforderungen an einen Unternehmensbereich.
+    Richtig
 
 <!-- -->
 
 c)  Der Bereich DevOps kann als Schnittmenge der Bereiche Entwicklung,
     Betrieb und Buchhaltung betrachtet werden.
-
+    Richtig
 <!-- -->
 
 d)  Der Bereich CD umfasst das Paketxeren Freigeben, Konftguneren und
     Überwachen einer Anwendungssoftware für die Kunden.
-
+    Falsch
 ## Aufgabe 3
 
 a)  Ordnen Sie der Ethernet-Leitung die entsprechenden Bereiche 1-5 zu.
@@ -88,12 +97,12 @@ b)  Es sollen die unterschiedlichen Adressierungsarten in einem Netzwerk
     betrachtet werden. Ergänzen Sie die folgende Tabelle zu den
     häufigsten Adressarten.
 
-    | OSI-Schicht | Adressenname | Länge in Bit | Aufgabe |
-    |----|----|----|----|
-    | 4 |  |  | Identifikation der Anwendung bzw. des Dienstes |
-    |  | MAC |  |  |
-    | 3 |  |  |  |
-    |  |  | 32 Bit |  |
+    | OSI-Schicht | Adressenname | Länge in Bit |                  Aufgabe                       |
+    |-------------|--------------|--------------|------------------------------------------------|
+    | 4           |        port  |              | Identifikation der Anwendung bzw. des Dienstes |
+    | 2           |          MAC |           48 |                         Hardwareaddressierung  |
+    | 3           |       IPv6   |       128    |            Adressierung in IPv6 Netzwerk       |
+    | 3           |       IPv4   |       32 Bit |            Adressierung in IPv4 Netzen         |
 
 <!-- -->
 
@@ -138,6 +147,8 @@ Skonto: 2 %
 
 Transportkosten: 5000,00 € pro 100 Stück
 
+4803,00€
+
 ## Aufgabe 5
 
 Geben Sie die Aufgabengebiete der folgenden Programme an.
@@ -150,15 +161,18 @@ ip (Linux): Konfiguration und Anzeige der IP-Adressen und Routen
 
 - netstat
 
-- ipconfig
+- ipconfig: Netzwerkkonfiguration
 
-- nslookup
+- nslookup: Eintrag in DNS ansehen
 
-- arp
+- arp: Zuweisung MAC - IP
 
-- tracert/traceroute
+- tracert/traceroute: Hops von Pings Nachvollziehen
 
 ## Aufgabe 6
 
 Erklären Sie kurz die Unterschiede zwischen Docker, VirtualBox und
 Proxmox.
+
+Docker ist kleine Hardware z.B. RaspBerryPI im Heimnetz für Steuerung, VirtualBox ist eine
+Software zur ertsellung und Virtuellen Maschinen und Proxmox ist Keine Ahnung
