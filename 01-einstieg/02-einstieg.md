@@ -1,4 +1,5 @@
 ---
+css: ../css/style.css
 date: Schuljahr 2025/2026
 lang: de-DE
 subtitle: Lernfeld 10b -- Serverdienste bereitstellen und
@@ -72,16 +73,20 @@ title: Einstieg Lernfeld 10b und 11b
     b.  im einem *neuen* (Änderungen an der PATH-Variablen sind sonst
         nicht wirksam) Terminal mit
 
+        ::: {.io}
         ``` bash
         git --version
         ```
 
             git version 2.50.1
+        :::
 
+        :::: {.io}
         ``` bash
         pandoc --version
         ```
 
+        ::: {text="xs"}
             pandoc 3.7.0.2
             Features: +server +lua
             Scripting engine: Lua 5.4
@@ -89,6 +94,8 @@ title: Einstieg Lernfeld 10b und 11b
             Copyright (C) 2006-2024 John MacFarlane. Web: https://pandoc.org
             This is free software; see the source for copying conditions. There is no
             warranty, not even for merchantability or fitness for a particular purpose.
+        :::
+        ::::
 
 7.  Nehmen Sie die Gruppen-Einladung von Github an.  
     Diese erhalten Sie an Ihre dort hinterlegte E-Mail-Adresse.
@@ -123,9 +130,7 @@ title: Einstieg Lernfeld 10b und 11b
     git clone git@github.com:ARS-2023-BS-12INF/lernfeld-11b.git
     ```
 
-<!-- -->
-
-1.  Installieren Sie innerhalb von VSCode die Erweiterung [Codebraid
+10. Installieren Sie innerhalb von VSCode die Erweiterung [Codebraid
     Preview](https://github.com/gpoore/codebraid-preview-vscode).
 
     Wählen Sie die folgenden Optionen in der Konfiguration der
@@ -137,11 +142,33 @@ title: Einstieg Lernfeld 10b und 11b
 
     - [ ] CSS: Use Mardown Preview Styles
 
-2.  Bearbeiten Sie mit VSCode das Dokument
+11. Bearbeiten Sie mit VSCode das Dokument
     [01-einstieg/03-einstiegstest.md](03-einstiegstest.md) in
     `lernfeld-10b`.
 
-3.  Falls Sie noch nie auf Ihrem System Git verwendet haben, müssen Sie
+    In dem Markdown-Dokument notieren Sie Ihre Bearbeitung der Aufgaben
+    mithilfe von [fences
+    Divs](https://pandoc.org/MANUAL.html#extension-fenced_divs) mit der
+    Klasse `solution`. Diese werden in der Vorschau mit einem hellgelben
+    Hintergrund angezeigt:
+
+    - Markdown:
+
+      ``` markdown
+      ::: solution
+      Der Name »localhost« verweist typischerweise auf  
+      die IP-Adressen `127.0.0.1` und `::1`.
+      :::
+      ```
+
+    - Vorschau:
+
+      ::: {.solution}
+      Der Name »localhost« verweist typischerweise auf  
+      die IP-Adressen `127.0.0.1` und `::1`.
+      :::
+
+12. Falls Sie noch nie auf Ihrem System Git verwendet haben, müssen Sie
     dieses konfigurieren:
 
     ``` bash
@@ -149,42 +176,50 @@ title: Einstieg Lernfeld 10b und 11b
     git config --global user.email git@example.com
     ```
 
-4.  Fügen Sie Ihre Änderungen der Stagign-Area hinzu (`git add .`) und
+13. Fügen Sie Ihre Änderungen der Stagign-Area hinzu (`git add .`) und
     erstellen Sie einen Commit
     (`git commit -m "einstiegstest bearbeitet"`) mit Ihren Änderungen.
 
     ![](images/git-local.png)
 
-5.  Erstellen Sie in Github unter Ihrem Benutzernamen je ein
+14. Erstellen Sie in Github unter Ihrem Benutzernamen je ein
     **privates** (beim Erstellen »private« auswählen), leeres
     Git-Repository `lernfeld-10b` und `lernfeld-11b`.
 
-6.  Setzen Sie jeweils die push-URL in ihren lokalen Git-Repositories
+15. Setzen Sie jeweils die push-URL in ihren lokalen Git-Repositories
     auf ihr entsprechendes personliches Github-Repository:
 
+    ::: {text="sm"}
     ``` bash
     git remote set-url --push origin <YOUR_PERSONAL_GITHUB_REPOSITORY_HTTPS_URL>
     ```
+    :::
 
     Wenn Sie einen öffentlichen SSH-Schlüssel bei Github hinterlegt
     haben, dann verwenden Sie die SSH-URL:
 
+    ::: {text="sm"}
     ``` bash
     git remote set-url --push origin <YOUR_PERSONAL_GITHUB_REPOSITORY_SSH_URL>
     ```
+    :::
 
     Kontrolle
 
+    :::: {.io}
     ``` bash
     git remote -v
     ```
 
+    ::: {text="sm"}
     ``` bash
     origin   git@github.com:ARS-2023-BS-12INF/lernfeld-1Xb.git (fetch)
     origin   <YOUR_PERSONAL_GITHUB_REPOSITORY_URL> (push) 
     ```
+    :::
+    ::::
 
-7.  Pushen Sie Ihre Änderung(en):
+16. Pushen Sie Ihre Änderung(en):
 
     ``` bash
     git push 
@@ -194,9 +229,9 @@ title: Einstieg Lernfeld 10b und 11b
     Github-Webseite zu Ihrem personlichen Git-Repository (für
     `lernfeld-10b`) sehen können.
 
-8.  Erteilen Sie mir jeweils (`@andrebauer`) passende Rechte, damit ich
+17. Erteilen Sie mir jeweils (`@andrebauer`) passende Rechte, damit ich
     Ihre persönlichen Github-Repositories einsehen kann.
 
-9.  Erstellen Sie einen Issue in Ihrem personlichen Github-Repository
+18. Erstellen Sie einen Issue in Ihrem personlichen Github-Repository
     mit der Frage, ob ich ihre Bearbeitung einsehen kann. Fügen Sie dazu
     mich als Assignee hinzu.

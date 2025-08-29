@@ -19,7 +19,7 @@ title: Überblick über das Lernfeld 10b
 
 - Serverinfrastruktur
 
-  - Private Cloud, Public Cloud, Hybrid-Cloud,\
+  - Private Cloud, Public Cloud, Hybrid-Cloud,  
     Installation On-Premises / Cloud
 
   - Virtualisierung
