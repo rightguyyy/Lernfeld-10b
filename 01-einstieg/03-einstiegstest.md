@@ -57,23 +57,24 @@ c)  Geben Sie je zwei Aspekte an, die in einem Lasten- bzw.
 Entscheiden Sie, ob die folgenden Aussagen richtig oder falsch sind.
 
 a)  DevOps steht für Entwicklung und Betrieb eines Unternehmensbereichs.
-    Falsch
+    Richtig
 <!-- -->
 
 b)  Unter CI versteht man kontinuierliche Identifikation von neuen
     Anforderungen an einen Unternehmensbereich.
-    Richtig
+    Falsch
 
 <!-- -->
 
 c)  Der Bereich DevOps kann als Schnittmenge der Bereiche Entwicklung,
     Betrieb und Buchhaltung betrachtet werden.
-    Richtig
+    Falsch
 <!-- -->
 
 d)  Der Bereich CD umfasst das Paketxeren Freigeben, Konftguneren und
     Überwachen einer Anwendungssoftware für die Kunden.
     Falsch
+
 ## Aufgabe 3
 
 a)  Ordnen Sie der Ethernet-Leitung die entsprechenden Bereiche 1-5 zu.
@@ -83,13 +84,13 @@ a)  Ordnen Sie der Ethernet-Leitung die entsprechenden Bereiche 1-5 zu.
 
     | Nummer | Bereich        |
     |--------|----------------|
-    |        | Folienschirm   |
-    |        | Geflechtschirm |
-    |        | Isolator       |
-    |        | Ader           |
+    |    1   | Folienschirm   |
+    |     4  | Geflechtschirm |
+    |    35  | Isolator       |
+    |     2  | Ader           |
     |        |                |
 
-    Leitungsart:
+    Leitungsart: Twisted Pair
 
 <!-- -->
 
@@ -99,7 +100,7 @@ b)  Es sollen die unterschiedlichen Adressierungsarten in einem Netzwerk
 
     | OSI-Schicht | Adressenname | Länge in Bit |                  Aufgabe                       |
     |-------------|--------------|--------------|------------------------------------------------|
-    | 4           |        port  |              | Identifikation der Anwendung bzw. des Dienstes |
+    | 4           |        port  |         16   | Identifikation der Anwendung bzw. des Dienstes |
     | 2           |          MAC |           48 |                         Hardwareaddressierung  |
     | 3           |       IPv6   |       128    |            Adressierung in IPv6 Netzwerk       |
     | 3           |       IPv4   |       32 Bit |            Adressierung in IPv4 Netzen         |
