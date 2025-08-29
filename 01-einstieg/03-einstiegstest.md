@@ -71,7 +71,7 @@ c)  Der Bereich DevOps kann als Schnittmenge der Bereiche Entwicklung,
     Falsch
 <!-- -->
 
-d)  Der Bereich CD umfasst das Paketxeren Freigeben, Konftguneren und
+d)  Der Bereich CD umfasst das Paketieren Freigeben, Konfigurieren und
     Überwachen einer Anwendungssoftware für die Kunden.
     Falsch
 
