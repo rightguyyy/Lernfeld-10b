@@ -157,9 +157,9 @@ Beispiel:
 
 ip (Linux): Konfiguration und Anzeige der IP-Adressen und Routen
 
-- bmon
+- bmon: Linuxtool zur Bandbreitenmessung
 
-- netstat
+- netstat: Netzwerkstatistiken
 
 - ipconfig: Netzwerkkonfiguration
 
