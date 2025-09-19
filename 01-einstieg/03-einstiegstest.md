@@ -154,9 +154,8 @@ Transportkosten: 5000,00 € pro 100 Stück
 
 Geben Sie die Aufgabengebiete der folgenden Programme an.
 
-Beispiel:
-
-ip (Linux): Konfiguration und Anzeige der IP-Adressen und Routen
+Beispiel: ip (Linux): Konfiguration und Anzeige der IP-Adressen und
+Routen
 
 - bmon: Linuxtool zur Bandbreitenmessung
 
