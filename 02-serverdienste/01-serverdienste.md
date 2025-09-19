@@ -21,6 +21,8 @@ der Dienste.
 | DHCP - dynamic host configuration protocol | verteilt Netzwerkparameter (z. B. IPv4-Adresse und Subnetzmaske) an Clients | Port: 67, DORA-Prinzip |
 |  |  |  |
 
+Siehe Onenote
+
 ## Aufgabe 2
 
 Für spätere Aufgaben, z. B. die Konfiguration der Firewall, müssen für
@@ -54,3 +56,5 @@ Server S1 aufbaut. Ergänzen Sie die Tabelle um die fehlenden Angaben.
 |------------|------------------|------------|-----------------|-----------|
 | Anfrage    | 192.168.22.103   | 35644      |                 |           |
 |            |                  |            |                 |           |
+
+Siehe Onennote
