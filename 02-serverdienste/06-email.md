@@ -11,9 +11,13 @@ title: Serverdienste -- E-Mail
 
 Unterscheiden Sie MUA und MTA.
 
+Ein Mail Transfer Agent oder Message Transfer Agent (MTA) ist die Software eines Mailservers, die E-Mails entgegennimmt und sendet. Im Gegensatz dazu dient der Mail User Agent (MUA) zur Bearbeitung von Mails durch den Computerbenutzer.
+
 ## Aufgabe 2
 
 Unterscheiden Sie die Protokolle SMTP, IMAP und POP3.
+
+Bei allen drei Begriffen handelt es sich um Protokolle, mit denen E-Mail-Versand ermöglicht wird. Kurz gesagt: Per SMTP (Simple Mail Transfer Protocol) versendest du E-Mails – per IMAP (Internet Message Access Protocol) und POP3 (Post Office Protocol Version 3) rufst du sie vom Server ab.
 
 ## Aufgabe 3
 
