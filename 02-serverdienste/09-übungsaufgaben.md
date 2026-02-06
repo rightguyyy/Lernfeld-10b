@@ -26,18 +26,16 @@ dazu die Tabelle aus.
 
 | Dienst | Port |
 |--------|-----:|
-|        |  123 |
-|        |   80 |
-| HTTPS  |      |
-|        |   25 |
-|        |   53 |
-| IMAP   |      |
-| FTP    |      |
-| NTP    |      |
-|        |   22 |
-|        |  161 |
-|        |  993 |
-| POP3S  |      |
+| HTTP   |   80 |
+| HTTPS  |  443 |
+| SMTP   |   25 |
+| DNS    |   53 |
+| IMAP   |  993 |
+| FTP    |   21 |
+| NTP    |  123 |
+| SSH    |   22 |
+| SNMP   |  161 |
+| POP3S  |  995 |
 
 ## Aufgabe 4
 
