@@ -4,166 +4,172 @@ date: Schuljahr 2025/2026
 lang: de-DE
 subtitle: Lernfeld 10b -- Serverdienste bereitstellen und
   Administrationsaufgaben automatisieren
-title: Übungsaufgaben Serverdienste
+title: Serverdienste -- Webserver
 ---
 
 ## Aufgabe 1
 
-Beschreiben Sie eine Möglichkeit, wie Sie die NetzwerkKonfiguration
-eines Server überprüfen.
+Erläutern Sie die Aufgabe eines Websersers.
 
-Mit dem Befehl ip addr oder ifconfig lassen sich IP-Adressen, Netzmasken und Schnittstellen anzeigen. Zusätzlich kann ip route zur Prüfung der Routing-Tabelle verwendet werden.
+Ein Webserver stellt Webseiten und Webanwendungen über HTTP/HTTPS bereit.
+Er verarbeitet Anfragen von Clients (Browsern), liefert Inhalte wie HTML,
+CSS, Bilder oder APIs aus und kann auch dynamische Inhalte erzeugen.
 
 ## Aufgabe 2
 
-Nennen Sie ein Shell-Kommando inklusive Beispiel, mit dem Sie die
-Funktion eines DNS-Servers mit der IP-Adresse `5.6.7.8` überprüfen.
+Nennen Sie vier bekannte Webserver.
 
-nslookup example.com 5.6.7.8
-
-oder
-
-dig @5.6.7.8 example.com
+- Apache HTTP Server  
+- Nginx  
+- Microsoft IIS  
+- LiteSpeed  
 
 ## Aufgabe 3
 
-Für spätere Aufgaben, z. B. die Konfiguration der Firewall, müssen für
-bestimmte Dienste die entsprechenden OSI-Schicht-4-Ports gesammelt
-werden. Ordnen Sie Dienste bestimmten Well-Known-Ports zu. Füllen Sie
-dazu die Tabelle aus.
+Vervollständigen Sie die Tabelle zu HTTP-Status-Codes
 
-| Dienst | Port |
-|--------|-----:|
-| HTTP   |   80 |
-| HTTPS  |  443 |
-| SMTP   |   25 |
-| DNS    |   53 |
-| IMAP   |  993 |
-| FTP    |   21 |
-| NTP    |  123 |
-| SSH    |   22 |
-| SNMP   |  161 |
-| POP3S  |  995 |
+| Nummer | Status | Bedeutung |
+|----|----|----|
+| 200 | OK | Die Anfrage war erfolgreich und das Ergebnis wird übermittelt |
+| 301 | Moved Permanently | Ressource wurde dauerhaft verschoben (Weiterleitung) |
+| 403 | Forbidden | Zugriff verboten, Client hat keine Berechtigung |
+| 404 | Not Found | Angeforderte Ressource wurde nicht gefunden |
 
 ## Aufgabe 4
 
-Bei der Kommunikation zwischen Client und Server werden IP-Adressen und
-Ports verwendet. Die Kombination wird „Socket" genannt. PC1 mit der
-IP-Adresse 10.20.30.57 baut eine HTTPS-Verbindung mit dem Server S
-10.0.0.20 aufbaut. Ergänzen Sie die Tabelle um die fehlenden Angaben.
+Erklären Sie, wozu im Zusammenhang mit HTTPS eine PKI mit Zertifikaten
+benötigt wird und wie eine PKI funktioniert.
 
-| Verbindung | Quell-IP-Adresse | Quell-Port | Ziel-IP-Adresse | Ziel-Port |
-|------------|------------------|------------|-----------------|-----------|
-| Anfrage    | 10.20.30.57      | 32462      | 10.0.0.20       | 443       |
-| Antwort    | 10.0.0.20        | 443        | 10.20.30.57     | 32462     |
+Eine PKI (Public Key Infrastructure) stellt digitale Zertifikate aus und
+verwaltet diese. Zertifikate enthalten den öffentlichen Schlüssel eines
+Servers sowie Identitätsinformationen. Eine Zertifizierungsstelle (CA)
+signiert das Zertifikat. Der Client prüft die Signatur anhand vertrauens-
+würdiger Root-CAs. So werden Authentizität und sichere Schlüsselverteilung
+für verschlüsselte HTTPS-Verbindungen gewährleistet.
 
 ## Aufgabe 5
 
-Beschreiben Sie den Nachrichtenverlauf bei DHCP (»DORA-Prozess«).
+a)  Nach der Entscheidung für einen Webserver soll überlegt werden, ob
+    der Einsatz von HTTPS sinnvoll ist. Beurteilen Sie, ob bei einem nur
+    intern verwendeten Webserver der Einsatz des HTTPS-Protolkolls
+    sinnvoll ist.
 
-Discover: Client sucht einen DHCP-Server.  
-Offer: Server bietet eine IP-Adresse an.  
-Request: Client fordert das Angebot an.  
-Acknowledge: Server bestätigt die Zuweisung.
+Ja, auch intern sinnvoll. HTTPS schützt vor Mitschneiden im internen Netz,
+verhindert Manipulationen (MITM) und ermöglicht Authentizität des Servers.
+Gerade bei sensiblen Daten oder BYOD sollte HTTPS verwendet werden.
 
-## Aufgabe 6
+<!-- -->
 
-Geben Sie mindestens fünf (typische) Parameter an, die mit DHCP
-konfiguriert werden können.
+b)  Vergleichen Sie die beiden Protokolle HTTP und HTTPS, indem Sie die
+    Aussagen den Protokollen zuordnen.
 
-IP-Adresse  
-Subnetzmaske  
-Standard-Gateway  
-DNS-Server  
-Lease-Time  
-NTP-Server
+| Aussage                                             | HTTP | HTTPS |
+|-----------------------------------------------------|------|-------|
+| transportiert die Daten einer Webseite              |  X   |   X   |
+| kann die Authentizität einer Webseite sicherstellen |      |   X   |
+| verbraucht weniger Ressourcen                       |  X   |       |
+| kann Datenverkehr verschlüsseln                     |      |   X   |
+| verwendet Zertifikate                               |      |   X   |
 
-## Aufgabe 7
+<!-- -->
 
-Erläutern Sie die DHCP-Adressvergabeverfahren manuelle, automatische und
-dynamische Zuordnung.
+c)  Sie sollen die HTTPS-Technik in Verbindung mit TLS bei einem Meeting
+    erläutern. Mit einem Programmablaufplan (PAP) lassen sich Abläufe
+    grafisch darstellen. Durch die grafische Darstellung wird der Ablauf
+    einfacher nachvollziehbar.
 
-Manuell: Feste Zuordnung einer bestimmten IP zu einer MAC-Adresse.  
-Automatisch: Server weist einmalig eine feste IP aus einem Pool zu.  
-Dynamisch: IP wird zeitlich begrenzt (Lease) vergeben und später neu verteilt.
+    Erstellen Sie aus den gegebenen Ablaufschritten einen
+    Programmablaufplan, z. B. mit
+    [PlantUML](https://plantuml.com/de/activity-diagram-beta). Dazu
+    können sie den
+    [PlantUML-Online-Editor](https://www.plantuml.com/plantuml/uml/)
+    verwenden.
 
-## Aufgabe 8
+    ![](images/pap-https-tls-elemente.png)
 
-Grenzen Sie die Begriffe „Lease-Time", „Renewal-Time" und „Rebind-Time"
-voneinander ab.
+Beispiel-PAP in PlantUML:
 
-Lease-Time: Gesamtdauer der IP-Zuweisung.  
-Renewal-Time (T1): Zeitpunkt zur Verlängerung beim ursprünglichen Server.  
-Rebind-Time (T2): Zeitpunkt zur Verlängerung bei beliebigem Server, falls T1 fehlschlägt.
+```
+@startuml
+start
+:Client sendet HTTPS-Anfrage;
+:Server sendet Zertifikat;
+:Client prüft Zertifikat (CA, Ablauf, Hostname);
+:Client erzeugt Sitzungsschlüssel;
+:Schlüssel mit öffentlichem Schlüssel verschlüsseln;
+:Server entschlüsselt Sitzungsschlüssel;
+:Symmetrisch verschlüsselte Kommunikation startet;
+stop
+@enduml
+```
 
-## Aufgabe 9
+<!-- -->
 
-Geben Sie an, was SLAAC bedeutet und erklären Sie, wie es funktioniert.
+d)  Der interne Webserver soll Zertifikate verwenden. Entscheiden Sie,
+    welche Einsatzszenarien durch die Verwendung eines Zertifikats
+    umgesetzt werden können.
 
-SLAAC (Stateless Address Autoconfiguration) ermöglicht Clients im IPv6-Netz selbstständig eine Adresse zu bilden. Der Router sendet Router Advertisements, aus Präfix und Interface-ID wird automatisch die IPv6-Adresse gebildet.
+1.  Eine Verbindung kann durch Verschlüsselung abgesichert werden. → Ja  
+2.  Ein Load Balancing zwischen Servern kann einfach ausgefuhrt werden. → Nein  
+3.  Ein Server kann seine Identität nachweisen → Ja  
+4.  Webseiten, die ein Zertifikat anbieten, werden besser von Suchmaschinen bewertet. → Ja  
 
-## Aufgabe 10
+<!-- -->
 
-Erläutern Sie am Beispiel von `ah9IeB.east.us.your-server.com` die
-Begriffe FQDN, Subdomain und TLD.
+e)  Ein Mitarbeiter möchte wissen, wie ein Zertifikat funktioniert. Er
+    zeigt Ihnen ein Zertifikat einer besuchten Webseite.
 
-FQDN (Fully Qualified Domain Name): vollständiger Domainname inkl. aller Ebenen → ah9IeB.east.us.your-server.com  
-Subdomain: east.us.your-server  
-TLD (Top Level Domain): com
+    ![](images/zertifikat.png)
 
-## Aufgabe 11
+    Erläutern Sie dem Mitarbeiter die Aufgabe des öffentlichen
+    Schlüssels und des „Fingerabdrucks".
 
-Erklären, sie was ein DNS-Root-Server und dessen Aufgabe ist.
+Öffentlicher Schlüssel:  
+Wird vom Client genutzt, um Daten (z. B. Sitzungsschlüssel) sicher an
+den Server zu verschlüsseln. Nur der Server kann sie mit seinem privaten
+Schlüssel entschlüsseln.
 
-Ein DNS-Root-Server ist die oberste Instanz im DNS-System. Er kennt die zuständigen Nameserver der Top-Level-Domains und verweist Anfragen an diese weiter.
+Fingerabdruck (Fingerprint):  
+Hashwert des Zertifikats. Dient zur eindeutigen Identifikation und zum
+Vergleich, ob ein Zertifikat manipuliert oder ausgetauscht wurde.
 
-## Aufgabe 12
+<!-- -->
 
-Unterscheiden Sie die Begriffe Forward- und Reverse-Lookup.
+f)  Bei der Kommunikation zwischen Server und Client werden sowohl die
+    symmetrische als auch die asymmetrische Verschlüsselung eingesetzt.
+    Geben Sie die grundlegenden Funktionsweisen an und nennen Sie Vor-
+    und Nachteile der beiden Verschlüsselungsarten.
 
-Forward-Lookup: Domainname wird in eine IP-Adresse aufgelöst.  
-Reverse-Lookup: IP-Adresse wird in einen Domainnamen aufgelöst.
+| Verschlüsselungsart | Funktionsweise | Vorteile | Nachteﬂe |
+|----|----|----|----|
+| symmetrische Verschlüsselung | ein Schlüssel zur Ver- und Entschlüsselung | sehr schnell, effizient | aufwendiger Schlüsselaustausch |
+| asymmetrische Verschlüsselung | Schlüsselpaar aus öffentlichem und privatem Schlüssel | sicherer Schlüsselaustausch, Authentifizierung möglich | langsamer, mehr Rechenaufwand |
 
-## Aufgabe 13
+<!-- -->
 
-Beschreiben Sie, was Cache-Poisoning ist und wie es mit DNSSEC
-verhindert werden kann.
+g)  Ein wichtiger Ablauf bei der Arbeit mit Zertifikaten ist die
+    digitale Signatur. Beschreiben Sie den Ablauf der digitalen
+    Signatur, indem Sie die Abschnitte in der Grafik erläutern.
 
-Cache-Poisoning ist das Einschleusen falscher DNS-Einträge in den Cache eines Servers, um Nutzer auf falsche Ziele umzuleiten. DNSSEC schützt durch kryptografische Signaturen, mit denen die Echtheit der Antworten überprüft wird.
+1. Aus den Daten wird ein Hashwert gebildet.  
+2. Dieser Hash wird mit dem privaten Schlüssel des Absenders verschlüsselt (Signatur).  
+3. Empfänger berechnet selbst den Hash der Daten.  
+4. Empfänger entschlüsselt die Signatur mit dem öffentlichen Schlüssel.  
+5. Stimmen beide Hashwerte überein, sind Integrität und Authentizität bestätigt.
 
-## Aufgabe 14
+## Aufgabe 6: Zusatzaufgabe {#aufgabe-6}
 
-Erklären Sie, wozu »DNS over TLS« eingeführt wurde und wie es
-funktioniert.
+Eine Seite des internen Webservers soll den Essensplan einer Kantine
+abbilden. Sie sollen je ein kurzes Konzept für die Umsetzung als
+statische Internetseite sowie als dynamische Internetseite erstellen.
 
-DNS over TLS verschlüsselt DNS-Anfragen, damit sie nicht mitgelesen oder manipuliert werden können. Die Kommunikation zwischen Client und DNS-Server erfolgt über eine TLS-geschützte Verbindung.
+Statische Webseite:  
+HTML-Seite mit fest eingetragenem Speiseplan, Pflege per manuellem
+Bearbeiten und Upload (z. B. wöchentlich durch Verwaltung). Einfach,
+geringer Aufwand, keine Serverlogik nötig.
 
-## Aufgabe 15
-
-Beschreiben Sie die drei Systeme zur Zeitmessung
-
-Linux-Zeitmessung mit timestamp: Sekunden seit 01.01.1970 (Unix-Epoche).  
-NTP-Zeitmessung im Timestamp-Format: Sekunden seit 01.01.1900 mit Bruchteilen.  
-NTP-Zeitmessung im Datestamp-Format: Datum und Uhrzeit als lesbarer Zeitstempel.
-
-## Aufgabe 16
-
-Erklären Sie, was Stratum-0 ist.
-
-Stratum-0 sind hochpräzise Zeitquellen wie Atomuhren oder GPS-Empfänger. Sie liefern die Referenzzeit und sind direkt nicht im Netzwerk erreichbar.
-
-## Aufgabe 17
-
-Benennen Sie die Attributstypen in Verzeichnisdiensten.
-
-String-Attribute  
-numerische Attribute  
-Boolesche Attribute  
-Zeit-/Datum-Attribute  
-Binärdaten-Attribute
-
-## Aufgabe 18
-
-Beschreiben Sie die Aufgabe von Gruppenrichtlininen im AD.
-
-Gruppenrichtlinien (GPO) dienen zur zentralen Verwaltung und Konfiguration von Benutzern und Computern im Active Directory. Damit können Sicherheitsrichtlinien, Softwareeinstellungen und Systemkonfigurationen automatisch verteilt und erzwungen werden.
+Dynamische Webseite:  
+Backend (z. B. PHP, Node.js oder Python) mit Datenbank für Menüs.
+Pflege über Admin-Oberfläche, automatische Anzeige nach Datum.
+Optional Filter (vegetarisch, Allergene), API-Anbindung möglich.
+Mehr Aufwand, aber flexibel und automatisierbar.
